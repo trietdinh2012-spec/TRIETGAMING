@@ -1,0 +1,3765 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>GEMS GAMING SHOP</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%,#ff17451c,transparent 28%),
+    radial-gradient(circle at 100% 10%,#ffd54a10,transparent 25%),
+    #050505;
+  color:#fff;
+  min-height:100vh;
+}
+
+button,input,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#050505e8;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #ff174533;
+}
+
+.nav{
+  width:min(1180px,94%);
+  margin:auto;
+  padding:11px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:1000;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#ff174f;
+}
+
+.navRight{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+/* ================= BALANCE ================= */
+
+.balanceCard{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 11px;
+  border-radius:14px;
+  border:1px solid #ffd54a55;
+  background:linear-gradient(135deg,#21180a,#0f0f0f);
+  color:#fff;
+  min-width:125px;
+  text-align:left;
+}
+
+.balanceCard:hover{
+  border-color:#ffd54a;
+}
+
+.balanceIcon{
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:#ffd54a16;
+}
+
+.balanceCard small{
+  display:block;
+  color:#888;
+  font-size:9px;
+  line-height:1;
+  margin-bottom:3px;
+}
+
+.balanceCard strong{
+  display:block;
+  color:#ffd54a;
+  font-size:14px;
+}
+
+.balanceCard>b{
+  color:#ffd54a;
+  font-size:18px;
+  margin-left:auto;
+}
+
+.navBtn{
+  border:1px solid #292929;
+  background:#111;
+  color:#fff;
+  border-radius:11px;
+  padding:9px 11px;
+}
+
+.navBtn:hover{
+  border-color:#ff174f;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+  width:min(1180px,94%);
+  margin:auto;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  margin:24px 0;
+  padding:38px 28px;
+  min-height:315px;
+  border-radius:25px;
+  border:1px solid #ff174544;
+  background:
+    linear-gradient(115deg,#ff17452b,#101010d9),
+    #090909;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  right:-150px;
+  top:-130px;
+  border-radius:50%;
+  background:#ff17451f;
+  filter:blur(5px);
+}
+
+.heroContent{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+}
+
+.hero h1{
+  font-size:clamp(40px,8vw,72px);
+  line-height:.95;
+  font-weight:1000;
+}
+
+.hero h1 span{
+  color:#ff174f;
+}
+
+.hero p{
+  margin:17px 0;
+  color:#aaa;
+  line-height:1.6;
+}
+
+.actions{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.primary{
+  border:0;
+  background:linear-gradient(135deg,#ff174f,#ff4d00);
+  color:#fff;
+  font-weight:900;
+  padding:12px 17px;
+  border-radius:12px;
+  box-shadow:0 8px 30px #ff174522;
+}
+
+.primary:hover{
+  filter:brightness(1.1);
+}
+
+.secondary{
+  background:#121212;
+  color:#fff;
+  border:1px solid #333;
+  padding:11px 16px;
+  border-radius:12px;
+}
+
+.secondary:hover{
+  border-color:#ff174f;
+}
+
+/* ================= NOTICE ================= */
+
+.notice{
+  margin:15px 0;
+  padding:16px;
+  border-radius:16px;
+  background:#100d0d;
+  border:1px solid #ff174533;
+  color:#aaa;
+  line-height:1.6;
+  font-size:13px;
+}
+
+.notice b{
+  color:#fff;
+}
+
+/* ================= SEARCH ================= */
+
+.sectionHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:25px 0 12px;
+}
+
+.sectionHead h2{
+  font-size:23px;
+}
+
+.sectionHead span{
+  font-size:12px;
+  color:#777;
+}
+
+.search{
+  width:100%;
+  padding:14px 16px;
+  background:#101010;
+  border:1px solid #292929;
+  border-radius:13px;
+  color:#fff;
+  outline:none;
+}
+
+.search:focus{
+  border-color:#ff174f;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+  display:flex;
+  gap:7px;
+  overflow-x:auto;
+  padding:10px 0;
+}
+
+.cat{
+  white-space:nowrap;
+  background:#111;
+  border:1px solid #292929;
+  color:#aaa;
+  padding:9px 13px;
+  border-radius:999px;
+}
+
+.cat.active{
+  background:#ff174f;
+  color:#fff;
+  border-color:#ff174f;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.card{
+  background:linear-gradient(145deg,#151515,#0b0b0b);
+  border:1px solid #292929;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#ff174f77;
+}
+
+.productImage{
+  height:150px;
+  display:grid;
+  place-items:center;
+  font-size:55px;
+  background:
+    radial-gradient(circle,#ff174533,transparent 58%),
+    #0d0d0d;
+}
+
+.cardBody{
+  padding:14px;
+}
+
+.badge{
+  display:inline-block;
+  font-size:10px;
+  font-weight:800;
+  padding:5px 7px;
+  border-radius:7px;
+  background:#281015;
+  color:#ff6d8a;
+  margin-bottom:8px;
+}
+
+.card h3{
+  font-size:16px;
+  line-height:1.3;
+  margin-bottom:7px;
+}
+
+.desc{
+  color:#888;
+  font-size:12px;
+  line-height:1.45;
+  min-height:37px;
+}
+
+.price{
+  font-size:19px;
+  font-weight:1000;
+  color:#ffd54a;
+  margin:11px 0;
+}
+
+.buy{
+  width:100%;
+  padding:10px;
+  border:0;
+  border-radius:10px;
+  background:#ff174f;
+  color:#fff;
+  font-weight:900;
+}
+
+.buy:hover{
+  background:#ff315f;
+}
+
+/* ================= INFO ================= */
+
+.infoGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:30px 0;
+}
+
+.info{
+  background:#0e0e0e;
+  border:1px solid #252525;
+  padding:19px;
+  border-radius:16px;
+}
+
+.info b{
+  display:block;
+  margin-bottom:7px;
+}
+
+.info p{
+  font-size:13px;
+  color:#888;
+  line-height:1.5;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  margin-top:45px;
+  padding:30px 10px;
+  text-align:center;
+  border-top:1px solid #222;
+  color:#666;
+  font-size:12px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  background:#000b;
+  backdrop-filter:blur(8px);
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modalBox{
+  width:min(550px,100%);
+  max-height:91vh;
+  overflow:auto;
+  background:#101010;
+  border:1px solid #333;
+  border-radius:22px;
+  padding:21px;
+}
+
+.modalHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.close{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#181818;
+  border:1px solid #333;
+  color:#fff;
+}
+
+.close:hover{
+  border-color:#ff174f;
+}
+
+/* ================= FORMS ================= */
+
+.field{
+  margin:11px 0;
+}
+
+.field label{
+  display:block;
+  font-size:12px;
+  color:#aaa;
+  margin-bottom:6px;
+}
+
+.field input,
+.field select{
+  width:100%;
+  padding:12px;
+  background:#090909;
+  border:1px solid #333;
+  border-radius:10px;
+  color:#fff;
+  outline:none;
+}
+
+.field input:focus,
+.field select:focus{
+  border-color:#ff174f;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+  display:flex;
+  gap:7px;
+  margin-bottom:15px;
+}
+
+.tab{
+  flex:1;
+  padding:10px;
+  background:#171717;
+  border:1px solid #292929;
+  border-radius:10px;
+  color:#999;
+}
+
+.tab.active{
+  background:#ff174f;
+  border-color:#ff174f;
+  color:#fff;
+}
+
+/* ================= CART ================= */
+
+.cartItem,
+.orderItem,
+.adminItem{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid #252525;
+}
+
+.muted{
+  color:#777;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  padding:16px 0;
+  font-size:19px;
+  font-weight:900;
+}
+
+.small{
+  padding:7px 9px;
+  background:#181818;
+  border:1px solid #333;
+  border-radius:8px;
+  color:#fff;
+}
+
+.small:hover{
+  border-color:#ff174f;
+}
+
+.empty{
+  text-align:center;
+  padding:30px 10px;
+  color:#777;
+}
+
+/* ================= PAYMENT ================= */
+
+.qr{
+  width:220px;
+  height:220px;
+  display:block;
+  margin:14px auto;
+  background:#fff;
+  padding:8px;
+  border-radius:13px;
+}
+
+.payment{
+  background:#090909;
+  border:1px solid #292929;
+  border-radius:15px;
+  padding:15px;
+  text-align:center;
+  line-height:1.8;
+}
+
+.payment strong{
+  color:#ffd54a;
+}
+
+.transferInfo{
+  margin-top:12px;
+  padding:14px;
+  background:#0b0b0b;
+  border:1px solid #292929;
+  border-radius:14px;
+}
+
+.transferRow{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:9px 0;
+  border-bottom:1px solid #202020;
+  font-size:13px;
+}
+
+.transferRow:last-child{
+  border-bottom:0;
+}
+
+.transferRow span{
+  color:#777;
+}
+
+.transferRow b{
+  text-align:right;
+  color:#fff;
+  word-break:break-word;
+}
+
+.copyBtn{
+  margin-left:5px;
+  padding:4px 7px;
+  border-radius:6px;
+  border:1px solid #333;
+  background:#171717;
+  color:#fff;
+  font-size:11px;
+}
+
+.depositOptions{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+  margin:12px 0;
+}
+
+.depositOption{
+  padding:13px 10px;
+  background:#111;
+  border:1px solid #292929;
+  border-radius:12px;
+  color:#fff;
+  text-align:left;
+}
+
+.depositOption:hover{
+  border-color:#ff174f;
+  background:#171010;
+}
+
+.depositOption b{
+  display:block;
+  color:#ffd54a;
+  font-size:16px;
+}
+
+.depositOption span{
+  color:#777;
+  font-size:11px;
+}
+
+.depositStatus{
+  margin-top:14px;
+  padding:13px;
+  border-radius:13px;
+  background:#0b0b0b;
+  border:1px solid #292929;
+}
+
+.depositStatusTitle{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.statusPending{
+  color:#ffd54a;
+}
+
+.statusSuccess{
+  color:#35e58b;
+}
+
+.statusReject{
+  color:#ff526e;
+}
+
+/* ================= ADMIN ================= */
+
+.adminGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.stat{
+  background:#0b0b0b;
+  border:1px solid #292929;
+  padding:15px;
+  border-radius:14px;
+}
+
+.stat span{
+  color:#777;
+  font-size:12px;
+}
+
+.stat b{
+  display:block;
+  font-size:24px;
+  margin-top:4px;
+}
+
+.adminTitle{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:20px 0 10px;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+  z-index:300;
+  bottom:20px;
+  left:50%;
+  transform:translate(-50%,100px);
+  background:#151515;
+  border:1px solid #ff174f;
+  padding:12px 17px;
+  border-radius:12px;
+  transition:.3s;
+  max-width:90%;
+  text-align:center;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .infoGrid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:560px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .balanceCard{
+    min-width:auto;
+    padding:7px;
+  }
+
+  .balanceCard small{
+    font-size:8px;
+  }
+
+  .balanceCard strong{
+    font-size:12px;
+  }
+
+  .balanceCard>b{
+    display:none;
+  }
+
+  .navBtn{
+    padding:8px;
+    font-size:12px;
+  }
+
+  .hero{
+    padding:27px 19px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+
+  .productImage{
+    height:120px;
+    font-size:42px;
+  }
+
+  .cardBody{
+    padding:11px;
+  }
+
+  .card h3{
+    font-size:14px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .adminGrid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+      GEMS <span>GAMING</span>
+    </div>
+
+    <div class="navRight">
+
+      <button
+        class="balanceCard"
+        onclick="openBalanceCenter()">
+
+        <span class="balanceIcon">💰</span>
+
+        <span>
+          <small>SỐ DƯ</small>
+          <strong id="balanceBox">0đ</strong>
+        </span>
+
+        <b>＋</b>
+
+      </button>
+
+      <button
+        class="navBtn"
+        onclick="openCart()">
+        🛒 <span id="cartCount">0</span>
+      </button>
+
+      <button
+        class="navBtn"
+        onclick="openAccount()">
+        👤
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+  <section class="hero">
+
+    <div class="heroContent">
+
+      <h1>
+        GEMS <span>GAMING</span>
+      </h1>
+
+      <p>
+        SHOP GAMING • MENU ĐỘC QUYỀN • GÓI VIP • DỊCH VỤ
+      </p>
+
+      <div class="actions">
+
+        <button
+          class="primary"
+          onclick="scrollProducts()">
+          🛍️ XEM SẢN PHẨM
+        </button>
+
+        <button
+          class="secondary"
+          onclick="openDeposit()">
+          💳 NẠP TIỀN
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="notice">
+
+    <b>🔥 MENU ĐỘC QUYỀN</b><br>
+
+    30K / Ngày •
+    200K / Tuần •
+    500K / Tháng •
+    900K / Vĩnh Viễn ♾️
+
+    <br><br>
+
+    💬 Quan tâm sản phẩm →
+    Nhắn <b>TRIET</b> để được tư vấn.
+
+  </div>
+
+
+  <div class="sectionHead">
+
+    <h2>🛍️ SẢN PHẨM MUA HÀNG</h2>
+
+    <span id="productCount"></span>
+
+  </div>
+
+
+  <input
+    id="search"
+    class="search"
+    type="search"
+    placeholder="🔎 Tìm sản phẩm..."
+    oninput="renderProducts()">
+
+
+  <div class="categories">
+
+    <button
+      class="cat active"
+      onclick="setCategory('Tất cả',this)">
+      Tất cả
+    </button>
+
+    <button
+      class="cat"
+      onclick="setCategory('VIP',this)">
+      🔥 VIP
+    </button>
+
+    <button
+      class="cat"
+      onclick="setCategory('Dịch vụ',this)">
+      🎯 Dịch vụ
+    </button>
+
+  </div>
+
+
+  <div id="products" class="products"></div>
+
+
+  <section class="infoGrid">
+
+    <div class="info">
+      <b>⚡ MUA NHANH</b>
+      <p>
+        Chọn sản phẩm → thêm vào giỏ →
+        đặt hàng bằng số dư.
+      </p>
+    </div>
+
+    <div class="info">
+      <b>💰 SỐ DƯ</b>
+      <p>
+        Nạp tiền, theo dõi giao dịch
+        và sử dụng số dư để mua hàng.
+      </p>
+    </div>
+
+    <div class="info">
+      <b>💬 HỖ TRỢ</b>
+      <p>
+        Liên hệ TRIET để được tư vấn
+        trước khi mua sản phẩm.
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <b>GEMS GAMING</b>
+
+  <br><br>
+
+  Shop Gaming • 2026
+
+</footer>
+
+
+<!-- ================= ACCOUNT ================= -->
+
+<div id="accountModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>👤 TÀI KHOẢN</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('accountModal')">
+        ×
+      </button>
+
+    </div>
+
+    <div id="accountContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= LOGIN ================= -->
+
+<div id="loginModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>🔐 TÀI KHOẢN</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('loginModal')">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="tabs">
+
+      <button
+        id="loginTab"
+        class="tab active"
+        onclick="switchAuth('login')">
+        Đăng nhập
+      </button>
+
+      <button
+        id="registerTab"
+        class="tab"
+        onclick="switchAuth('register')">
+        Đăng ký
+      </button>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Tên tài khoản</label>
+
+      <input
+        id="authUsername"
+        placeholder="Nhập username">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Mật khẩu</label>
+
+      <input
+        id="authPassword"
+        type="password"
+        placeholder="Nhập mật khẩu">
+
+    </div>
+
+
+    <button
+      class="primary"
+      style="width:100%"
+      onclick="submitAuth()">
+      TIẾP TỤC
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ================= CART ================= -->
+
+<div id="cartModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>🛒 GIỎ HÀNG</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('cartModal')">
+        ×
+      </button>
+
+    </div>
+
+    <div id="cartContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= ORDERS ================= -->
+
+<div id="ordersModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>📦 ĐƠN HÀNG</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('ordersModal')">
+        ×
+      </button>
+
+    </div>
+
+    <div id="ordersContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= DEPOSIT ================= -->
+
+<div id="depositModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <div>
+
+        <h2>💳 NẠP TIỀN</h2>
+
+        <div class="muted">
+          Nạp tiền vào số dư GEMS GAMING
+        </div>
+
+      </div>
+
+      <button
+        class="close"
+        onclick="closeModal('depositModal')">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="payment">
+
+      <div
+        style="font-size:13px;color:#aaa">
+        SỐ DƯ HIỆN TẠI
+      </div>
+
+      <div
+        id="depositCurrentBalance"
+        style="
+        font-size:28px;
+        font-weight:1000;
+        color:#ffd54a;
+        margin:5px 0 10px">
+        0đ
+      </div>
+
+
+      <div
+        style="font-size:12px;color:#777">
+        Quét QR hoặc chuyển khoản
+        theo thông tin bên dưới
+      </div>
+
+
+      <!-- QR DEMO -->
+
+      <img
+        class="qr"
+        src="data:image/png;base64,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"
+        alt="QR thanh toán">
+
+
+      <div class="transferInfo">
+
+        <div class="transferRow">
+
+          <span>Ngân hàng</span>
+
+          <b>ZALO PAY</b>
+
+        </div>
+
+
+        <div class="transferRow">
+
+          <span>Chủ tài khoản</span>
+
+          <b>NGUYỄN ĐÌNH TRIẾT</b>
+
+        </div>
+
+
+        <div class="transferRow">
+
+          <span>Số tài khoản</span>
+
+          <b>
+
+            99ZP26191M48214606
+
+            <button
+              class="copyBtn"
+              onclick="copyText('99ZP26191M48214606')">
+              Sao chép
+            </button>
+
+          </b>
+
+        </div>
+
+
+        <div class="transferRow">
+
+          <span>Nội dung</span>
+
+          <b id="transferContent">
+            GEMS
+          </b>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>
+        Số tiền muốn nạp
+      </label>
+
+      <input
+        id="depositAmount"
+        type="number"
+        min="10000"
+        step="10000"
+        placeholder="Ví dụ: 50000"
+        oninput="updateTransferContent()">
+
+    </div>
+
+
+    <div class="depositOptions">
+
+      <button
+        class="depositOption"
+        onclick="selectDeposit(50000)">
+
+        <b>50.000đ</b>
+
+        <span>Nạp nhanh</span>
+
+      </button>
+
+
+      <button
+        class="depositOption"
+        onclick="selectDeposit(100000)">
+
+        <b>100.000đ</b>
+
+        <span>Phổ biến</span>
+
+      </button>
+
+
+      <button
+        class="depositOption"
+        onclick="selectDeposit(200000)">
+
+        <b>200.000đ</b>
+
+        <span>Tiết kiệm</span>
+
+      </button>
+
+
+      <button
+        class="depositOption"
+        onclick="selectDeposit(500000)">
+
+        <b>500.000đ</b>
+
+        <span>VIP</span>
+
+      </button>
+
+    </div>
+
+
+    <button
+      class="primary"
+      style="width:100%"
+      onclick="createDeposit()">
+
+      ✓ TÔI ĐÃ CHUYỂN KHOẢN
+
+    </button>
+
+
+    <div id="latestDeposit"></div>
+
+
+    <p
+      class="muted"
+      style="margin-top:12px">
+
+      Sau khi chuyển khoản, yêu cầu sẽ ở
+      trạng thái chờ duyệt cho đến khi Admin
+      kiểm tra giao dịch.
+
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- ================= ADMIN LOGIN ================= -->
+
+<div id="adminLoginModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>🔐 ADMIN</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('adminLoginModal')">
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Username</label>
+
+      <input
+        id="adminUser"
+        placeholder="admin">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Mật khẩu</label>
+
+      <input
+        id="adminPass"
+        type="password"
+        placeholder="MẶT KHẪU">
+
+    </div>
+
+
+    <button
+      class="primary"
+      style="width:100%"
+      onclick="adminLogin()">
+
+      ĐĂNG NHẬP ADMIN
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ================= ADMIN PANEL ================= -->
+
+<div id="adminModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2>⚙️ ADMIN PANEL</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('adminModal')">
+        ×
+      </button>
+
+    </div>
+
+    <div id="adminContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div id="productModal" class="modal">
+
+  <div class="modalBox">
+
+    <div class="modalHead">
+
+      <h2 id="productModalTitle">
+        ➕ SẢN PHẨM
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeModal('productModal')">
+        ×
+      </button>
+
+    </div>
+
+
+    <input
+      id="editProductId"
+      type="hidden">
+
+
+    <div class="field">
+
+      <label>Tên sản phẩm</label>
+
+      <input id="productName">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Giá</label>
+
+      <input
+        id="productPrice"
+        type="number">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Danh mục</label>
+
+      <select id="productCategory">
+
+        <option>VIP</option>
+
+        <option>Dịch vụ</option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Emoji</label>
+
+      <input id="productEmoji">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Mô tả</label>
+
+      <input id="productDesc">
+
+    </div>
+
+
+    <button
+      class="primary"
+      style="width:100%"
+      onclick="saveProduct()">
+
+      LƯU SẢN PHẨM
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+
+/* =========================================================
+   DATABASE
+========================================================= */
+
+const defaultProducts=[
+
+  {
+    id:101,
+    name:"MENU ĐỘC QUYỀN — 1 Ngày",
+    price:30000,
+    category:"VIP",
+    emoji:"🔥",
+    desc:"Gói sử dụng 1 ngày • Hỗ trợ tư vấn."
+  },
+
+  {
+    id:102,
+    name:"MENU ĐỘC QUYỀN — 1 Tuần",
+    price:200000,
+    category:"VIP",
+    emoji:"🔥",
+    desc:"Gói sử dụng 1 tuần • Hỗ trợ tư vấn."
+  },
+
+  {
+    id:103,
+    name:"MENU ĐỘC QUYỀN — 1 Tháng",
+    price:500000,
+    category:"VIP",
+    emoji:"👑",
+    desc:"Gói sử dụng 1 tháng • Hỗ trợ tư vấn."
+  },
+
+  {
+    id:104,
+    name:"MENU ĐỘC QUYỀN — Vĩnh Viễn",
+    price:900000,
+    category:"VIP",
+    emoji:"♾️",
+    desc:"Gói sử dụng vĩnh viễn theo chính sách shop."
+  },
+
+  {
+    id:105,
+    name:"AimLock V1",
+    price:50000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói V1 • Nhiều mức thiết lập."
+  },
+
+  {
+    id:106,
+    name:"AimLock V2",
+    price:100000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói V2 • Nhiều mức thiết lập."
+  },
+
+  {
+    id:107,
+    name:"AimLock V3",
+    price:200000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói V3 • Nhiều mức thiết lập."
+  },
+
+  {
+    id:108,
+    name:"AimLock V4",
+    price:350000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói V4 • Nhiều mức thiết lập."
+  },
+
+  {
+    id:109,
+    name:"AimLock V5",
+    price:500000,
+    category:"Dịch vụ",
+    emoji:"🔥",
+    desc:"Gói V5 • Nhiều mức thiết lập."
+  },
+
+  {
+    id:110,
+    name:"Aim Cổ",
+    price:100000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói thiết lập Aim Cổ."
+  },
+
+  {
+    id:111,
+    name:"Aim Drag",
+    price:100000,
+    category:"Dịch vụ",
+    emoji:"⚡",
+    desc:"Gói thiết lập thao tác kéo tâm."
+  },
+
+  {
+    id:112,
+    name:"Aim Body",
+    price:100000,
+    category:"Dịch vụ",
+    emoji:"🎮",
+    desc:"Gói thiết lập hỗ trợ thao tác ngắm."
+  },
+
+  {
+    id:113,
+    name:"Aim Center",
+    price:150000,
+    category:"Dịch vụ",
+    emoji:"🎯",
+    desc:"Gói thiết lập tâm và thao tác."
+  }
+
+];
+
+
+let products=
+  JSON.parse(
+    localStorage.getItem("gems_products")
+  );
+
+if(!products){
+
+  products=defaultProducts;
+
+  localStorage.setItem(
+    "gems_products",
+    JSON.stringify(products)
+  );
+
+}
+
+
+let users=
+  JSON.parse(
+    localStorage.getItem("gems_users")
+  )||[];
+
+
+let currentUser=
+  JSON.parse(
+    localStorage.getItem("gems_current_user")
+  )||null;
+
+
+let cart=
+  JSON.parse(
+    localStorage.getItem("gems_cart")
+  )||[];
+
+
+let orders=
+  JSON.parse(
+    localStorage.getItem("gems_orders")
+  )||[];
+
+
+let deposits=
+  JSON.parse(
+    localStorage.getItem("gems_deposits")
+  )||[];
+
+
+let category="Tất cả";
+let authMode="login";
+let isAdmin=false;
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function saveAll(){
+
+  localStorage.setItem(
+    "gems_products",
+    JSON.stringify(products)
+  );
+
+  localStorage.setItem(
+    "gems_users",
+    JSON.stringify(users)
+  );
+
+  localStorage.setItem(
+    "gems_cart",
+    JSON.stringify(cart)
+  );
+
+  localStorage.setItem(
+    "gems_orders",
+    JSON.stringify(orders)
+  );
+
+  localStorage.setItem(
+    "gems_deposits",
+    JSON.stringify(deposits)
+  );
+
+}
+
+
+function money(n){
+
+  return Number(n)
+    .toLocaleString("vi-VN")+"đ";
+
+}
+
+
+function user(){
+
+  if(!currentUser){
+    return null;
+  }
+
+  return users.find(
+    u=>u.username===currentUser.username
+  )||null;
+
+}
+
+
+function escapeHTML(str){
+
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+function toast(text){
+
+  const t=
+    document.getElementById("toast");
+
+  t.textContent=text;
+
+  t.classList.add("show");
+
+  setTimeout(()=>{
+    t.classList.remove("show");
+  },2500);
+
+}
+
+
+function openModal(id){
+
+  document
+    .getElementById(id)
+    .classList.add("show");
+
+}
+
+
+function closeModal(id){
+
+  document
+    .getElementById(id)
+    .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+function setCategory(cat,btn){
+
+  category=cat;
+
+  document
+    .querySelectorAll(".cat")
+    .forEach(
+      x=>x.classList.remove("active")
+    );
+
+  btn.classList.add("active");
+
+  renderProducts();
+
+}
+
+
+function renderProducts(){
+
+  const search=
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  const list=
+    products.filter(p=>{
+
+      const c=
+        category==="Tất cả" ||
+        p.category===category;
+
+      const s=
+        p.name
+          .toLowerCase()
+          .includes(search) ||
+
+        p.desc
+          .toLowerCase()
+          .includes(search);
+
+      return c&&s;
+
+    });
+
+
+  document.getElementById(
+    "productCount"
+  ).textContent=
+    list.length+" sản phẩm";
+
+
+  const box=
+    document.getElementById("products");
+
+
+  if(!list.length){
+
+    box.innerHTML=`
+
+      <div
+        class="empty"
+        style="grid-column:1/-1">
+
+        Không tìm thấy sản phẩm.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  box.innerHTML=
+    list.map(p=>`
+
+      <article class="card">
+
+        <div class="productImage">
+          ${p.emoji}
+        </div>
+
+        <div class="cardBody">
+
+          <span class="badge">
+            ${escapeHTML(p.category)}
+          </span>
+
+          <h3>
+            ${escapeHTML(p.name)}
+          </h3>
+
+          <p class="desc">
+            ${escapeHTML(p.desc)}
+          </p>
+
+          <div class="price">
+            ${money(p.price)}
+          </div>
+
+          <button
+            class="buy"
+            onclick="addToCart(${p.id})">
+
+            🛒 MUA HÀNG
+
+          </button>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+}
+
+
+function addToCart(id){
+
+  const p=
+    products.find(x=>x.id===id);
+
+  if(!p)return;
+
+
+  const item=
+    cart.find(x=>x.id===id);
+
+
+  if(item){
+
+    item.qty++;
+
+  }else{
+
+    cart.push({
+      id,
+      qty:1
+    });
+
+  }
+
+
+  saveAll();
+
+  updateUI();
+
+  toast("Đã thêm vào giỏ hàng.");
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function cartTotal(){
+
+  return cart.reduce(
+    (sum,item)=>{
+
+      const p=
+        products.find(
+          x=>x.id===item.id
+        );
+
+      return sum+
+        (p?p.price*item.qty:0);
+
+    },
+    0
+  );
+
+}
+
+
+function openCart(){
+
+  renderCart();
+
+  openModal("cartModal");
+
+}
+
+
+function renderCart(){
+
+  const box=
+    document.getElementById(
+      "cartContent"
+    );
+
+
+  if(!cart.length){
+
+    box.innerHTML=`
+
+      <div class="empty">
+        🛒 Giỏ hàng trống.
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  box.innerHTML=
+
+    cart.map(item=>{
+
+      const p=
+        products.find(
+          x=>x.id===item.id
+        );
+
+      if(!p)return "";
+
+
+      return `
+
+        <div class="cartItem">
+
+          <div>
+
+            <b>
+              ${escapeHTML(p.name)}
+            </b>
+
+            <div class="muted">
+              ${money(p.price)}
+              × ${item.qty}
+            </div>
+
+          </div>
+
+
+          <div style="text-align:right">
+
+            <b style="color:#ffd54a">
+              ${money(
+                p.price*item.qty
+              )}
+            </b>
+
+            <br>
+
+            <button
+              class="small"
+              onclick="removeCart(${p.id})">
+
+              Xóa
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join("")+
+
+    `
+
+      <div class="total">
+
+        <span>Tổng</span>
+
+        <span style="color:#ffd54a">
+          ${money(cartTotal())}
+        </span>
+
+      </div>
+
+
+      <button
+        class="primary"
+        style="width:100%"
+        onclick="checkout()">
+
+        📦 ĐẶT HÀNG
+
+      </button>
+
+    `;
+
+}
+
+
+function removeCart(id){
+
+  cart=
+    cart.filter(
+      x=>x.id!==id
+    );
+
+  saveAll();
+
+  updateUI();
+
+  renderCart();
+
+}
+
+
+function checkout(){
+
+  const u=user();
+
+
+  if(!u){
+
+    closeModal("cartModal");
+
+    openModal("loginModal");
+
+    toast("Vui lòng đăng nhập.");
+
+    return;
+
+  }
+
+
+  const total=cartTotal();
+
+
+  if(u.balance<total){
+
+    toast("Số dư không đủ.");
+
+    setTimeout(()=>{
+      closeModal("cartModal");
+      openDeposit();
+    },500);
+
+    return;
+
+  }
+
+
+  u.balance-=total;
+
+
+  const order={
+
+    id:"GM"+Date.now(),
+
+    username:u.username,
+
+    items:cart.map(x=>{
+
+      const p=
+        products.find(
+          z=>z.id===x.id
+        );
+
+      return{
+
+        name:p.name,
+        price:p.price,
+        qty:x.qty
+
+      };
+
+    }),
+
+    total:total,
+
+    status:"Đã tạo",
+
+    createdAt:
+      new Date()
+        .toLocaleString("vi-VN")
+
+  };
+
+
+  orders.unshift(order);
+
+  cart=[];
+
+  currentUser=u;
+
+
+  localStorage.setItem(
+    "gems_current_user",
+    JSON.stringify(u)
+  );
+
+
+  saveAll();
+
+  updateUI();
+
+  closeModal("cartModal");
+
+  toast("Đặt hàng thành công.");
+
+  setTimeout(
+    openOrders,
+    500
+  );
+
+}
+
+
+/* =========================================================
+   ACCOUNT
+========================================================= */
+
+function openAccount(){
+
+  renderAccount();
+
+  openModal("accountModal");
+
+}
+
+
+function renderAccount(){
+
+  const box=
+    document.getElementById(
+      "accountContent"
+    );
+
+
+  const u=user();
+
+
+  if(!u){
+
+    box.innerHTML=`
+
+      <div class="empty">
+
+        <div style="font-size:50px">
+          👤
+        </div>
+
+        <h3>
+          Chưa đăng nhập
+        </h3>
+
+        <p class="muted">
+          Đăng nhập để mua hàng.
+        </p>
+
+        <br>
+
+        <button
+          class="primary"
+          onclick="
+            closeModal('accountModal');
+            openModal('loginModal');
+          ">
+
+          ĐĂNG NHẬP / ĐĂNG KÝ
+
+        </button>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  box.innerHTML=`
+
+    <div class="info">
+
+      <b>
+        👤 ${escapeHTML(u.username)}
+      </b>
+
+      <p>
+        Số dư hiện tại
+      </p>
+
+      <div class="price">
+        ${money(u.balance)}
+      </div>
+
+    </div>
+
+    <br>
+
+
+    <button
+      class="primary"
+      style="width:100%;margin-bottom:8px"
+      onclick="
+        closeModal('accountModal');
+        openDeposit();
+      ">
+
+      💳 NẠP TIỀN
+
+    </button>
+
+
+    <button
+      class="secondary"
+      style="width:100%;margin-bottom:8px"
+      onclick="
+        closeModal('accountModal');
+        openOrders();
+      ">
+
+      📦 ĐƠN HÀNG
+
+    </button>
+
+
+    <button
+      class="secondary"
+      style="width:100%;margin-bottom:8px"
+      onclick="logout()">
+
+      🚪 ĐĂNG XUẤT
+
+    </button>
+
+
+    <button
+      class="secondary"
+      style="width:100%"
+      onclick="
+        closeModal('accountModal');
+        openModal('adminLoginModal');
+      ">
+
+      🔐 ADMIN
+
+    </button>
+
+  `;
+
+}
+
+
+function logout(){
+
+  currentUser=null;
+
+  localStorage.removeItem(
+    "gems_current_user"
+  );
+
+  closeModal("accountModal");
+
+  updateUI();
+
+  toast("Đã đăng xuất.");
+
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+function switchAuth(mode){
+
+  authMode=mode;
+
+  document
+    .getElementById("loginTab")
+    .classList.toggle(
+      "active",
+      mode==="login"
+    );
+
+  document
+    .getElementById("registerTab")
+    .classList.toggle(
+      "active",
+      mode==="register"
+    );
+
+}
+
+
+function submitAuth(){
+
+  const username=
+    document
+      .getElementById(
+        "authUsername"
+      )
+      .value
+      .trim();
+
+
+  const password=
+    document
+      .getElementById(
+        "authPassword"
+      )
+      .value;
+
+
+  if(username.length<3){
+
+    toast(
+      "Username tối thiểu 3 ký tự."
+    );
+
+    return;
+
+  }
+
+
+  if(password.length<4){
+
+    toast(
+      "Mật khẩu tối thiểu 4 ký tự."
+    );
+
+    return;
+
+  }
+
+
+  if(authMode==="register"){
+
+    if(
+      users.some(
+        u=>u.username===username
+      )
+    ){
+
+      toast(
+        "Username đã tồn tại."
+      );
+
+      return;
+
+    }
+
+
+    const u={
+
+      username,
+
+      password,
+
+      balance:0,
+
+      createdAt:
+        new Date()
+          .toLocaleString("vi-VN")
+
+    };
+
+
+    users.push(u);
+
+    currentUser=u;
+
+
+    localStorage.setItem(
+      "gems_current_user",
+      JSON.stringify(u)
+    );
+
+
+    saveAll();
+
+    closeModal("loginModal");
+
+    updateUI();
+
+    toast(
+      "Đăng ký thành công."
+    );
+
+
+  }else{
+
+    const u=
+      users.find(
+        x=>
+          x.username===username &&
+          x.password===password
+      );
+
+
+    if(!u){
+
+      toast(
+        "Sai tài khoản hoặc mật khẩu."
+      );
+
+      return;
+
+    }
+
+
+    currentUser=u;
+
+
+    localStorage.setItem(
+      "gems_current_user",
+      JSON.stringify(u)
+    );
+
+
+    closeModal("loginModal");
+
+    updateUI();
+
+    toast(
+      "Đăng nhập thành công."
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   DEPOSIT
+========================================================= */
+
+function openBalanceCenter(){
+
+  const u=user();
+
+
+  if(!u){
+
+    toast(
+      "Vui lòng đăng nhập trước."
+    );
+
+    openModal("loginModal");
+
+    return;
+
+  }
+
+
+  openDeposit();
+
+}
+
+
+function openDeposit(){
+
+  const u=user();
+
+
+  if(!u){
+
+    toast(
+      "Vui lòng đăng nhập."
+    );
+
+    openModal("loginModal");
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    "depositAmount"
+  ).value="";
+
+
+  document.getElementById(
+    "depositCurrentBalance"
+  ).textContent=
+    money(u.balance);
+
+
+  document.getElementById(
+    "transferContent"
+  ).textContent=
+    "GEMS "+
+    u.username.toUpperCase();
+
+
+  renderLatestDeposit();
+
+  openModal("depositModal");
+
+}
+
+
+function selectDeposit(amount){
+
+  document.getElementById(
+    "depositAmount"
+  ).value=amount;
+
+  updateTransferContent();
+
+}
+
+
+function updateTransferContent(){
+
+  const u=user();
+
+
+  if(!u)return;
+
+
+  document.getElementById(
+    "transferContent"
+  ).textContent=
+    "GEMS "+
+    u.username.toUpperCase();
+
+}
+
+
+function copyText(text){
+
+  if(
+    navigator.clipboard &&
+    navigator.clipboard.writeText
+  ){
+
+    navigator.clipboard
+      .writeText(text)
+      .then(()=>{
+        toast("Đã sao chép.");
+      })
+      .catch(()=>{
+        toast(
+          "Không thể sao chép."
+        );
+      });
+
+  }else{
+
+    toast(
+      "Thiết bị không hỗ trợ sao chép."
+    );
+
+  }
+
+}
+
+
+function createDeposit(){
+
+  const u=user();
+
+
+  if(!u){
+
+    toast(
+      "Vui lòng đăng nhập."
+    );
+
+    return;
+
+  }
+
+
+  const amount=
+    Number(
+      document.getElementById(
+        "depositAmount"
+      ).value
+    );
+
+
+  if(
+    !amount ||
+    amount<10000
+  ){
+
+    toast(
+      "Số tiền tối thiểu 10.000đ."
+    );
+
+    return;
+
+  }
+
+
+  const deposit={
+
+    id:"NAP"+Date.now(),
+
+    username:u.username,
+
+    amount:amount,
+
+    status:"Chờ duyệt",
+
+    createdAt:
+      new Date()
+        .toLocaleString("vi-VN")
+
+  };
+
+
+  deposits.unshift(deposit);
+
+  saveAll();
+
+  renderLatestDeposit();
+
+  renderAdminIfOpen();
+
+  toast(
+    "Đã tạo yêu cầu "+
+    money(amount)
+  );
+
+}
+
+
+function renderLatestDeposit(){
+
+  const u=user();
+
+  const box=
+    document.getElementById(
+      "latestDeposit"
+    );
+
+
+  if(!box||!u)return;
+
+
+  const d=
+    deposits.find(
+      x=>x.username===u.username
+    );
+
+
+  if(!d){
+
+    box.innerHTML="";
+
+    return;
+
+  }
+
+
+  let statusClass=
+    "statusPending";
+
+
+  if(d.status==="Đã duyệt"){
+
+    statusClass=
+      "statusSuccess";
+
+  }
+
+
+  if(d.status==="Từ chối"){
+
+    statusClass=
+      "statusReject";
+
+  }
+
+
+  box.innerHTML=`
+
+    <div class="depositStatus">
+
+      <div class="depositStatusTitle">
+
+        <b>
+          Giao dịch gần nhất
+        </b>
+
+        <b class="${statusClass}">
+          ${d.status}
+        </b>
+
+      </div>
+
+      <div class="muted">
+        Mã giao dịch: ${d.id}
+      </div>
+
+      <div class="muted">
+        Số tiền: ${money(d.amount)}
+      </div>
+
+      <div class="muted">
+        Thời gian: ${d.createdAt}
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   ORDERS
+========================================================= */
+
+function openOrders(){
+
+  renderOrders();
+
+  openModal("ordersModal");
+
+}
+
+
+function renderOrders(){
+
+  const box=
+    document.getElementById(
+      "ordersContent"
+    );
+
+
+  const u=user();
+
+
+  if(!u){
+
+    box.innerHTML=`
+
+      <div class="empty">
+        Vui lòng đăng nhập.
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const list=
+    orders.filter(
+      o=>o.username===u.username
+    );
+
+
+  if(!list.length){
+
+    box.innerHTML=`
+
+      <div class="empty">
+        Chưa có đơn hàng.
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  box.innerHTML=
+    list.map(o=>`
+
+      <div class="orderItem">
+
+        <div>
+
+          <b>
+            ${o.id}
+          </b>
+
+          <div class="muted">
+            ${o.createdAt}
+          </div>
+
+          <div class="muted">
+
+            ${o.items.map(
+              i=>
+                escapeHTML(i.name)+
+                " × "+i.qty
+            ).join("<br>")}
+
+          </div>
+
+        </div>
+
+
+        <div style="text-align:right">
+
+          <b style="color:#ffd54a">
+            ${money(o.total)}
+          </b>
+
+          <div class="badge">
+            ${o.status}
+          </div>
+
+        </div>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   ADMIN LOGIN
+========================================================= */
+
+function adminLogin(){
+
+  const u=
+    document
+      .getElementById("adminUser")
+      .value;
+
+
+  const p=
+    document
+      .getElementById("adminPass")
+      .value;
+
+
+  if(
+    u==="admin" &&
+    p==="123456"
+  ){
+
+    isAdmin=true;
+
+    closeModal(
+      "adminLoginModal"
+    );
+
+    renderAdmin();
+
+    openModal("adminModal");
+
+    toast(
+      "Admin đăng nhập thành công."
+    );
+
+  }else{
+
+    toast(
+      "Sai tài khoản Admin."
+    );
+
+  }
+
+}
+
+
+function renderAdminIfOpen(){
+
+  if(
+    isAdmin &&
+    document
+      .getElementById("adminModal")
+      .classList.contains("show")
+  ){
+
+    renderAdmin();
+
+  }
+
+}
+
+
+/* =========================================================
+   ADMIN PANEL
+========================================================= */
+
+function renderAdmin(){
+
+  const revenue=
+    orders.reduce(
+      (s,o)=>
+        s+Number(o.total),
+      0
+    );
+
+
+  const pending=
+    deposits.filter(
+      d=>d.status==="Chờ duyệt"
+    ).length;
+
+
+  document.getElementById(
+    "adminContent"
+  ).innerHTML=`
+
+    <div class="adminGrid">
+
+      <div class="stat">
+        <span>Sản phẩm</span>
+        <b>${products.length}</b>
+      </div>
+
+      <div class="stat">
+        <span>Tài khoản</span>
+        <b>${users.length}</b>
+      </div>
+
+      <div class="stat">
+        <span>Đơn hàng</span>
+        <b>${orders.length}</b>
+      </div>
+
+      <div class="stat">
+        <span>Doanh số demo</span>
+        <b>${money(revenue)}</b>
+      </div>
+
+    </div>
+
+
+    <div class="adminTitle">
+
+      <h3>
+        🛍️ SẢN PHẨM
+      </h3>
+
+      <button
+        class="primary"
+        onclick="openAddProduct()">
+
+        + Thêm
+
+      </button>
+
+    </div>
+
+
+    ${
+      products.map(p=>`
+
+        <div class="adminItem">
+
+          <div>
+
+            <b>
+              ${p.emoji}
+              ${escapeHTML(p.name)}
+            </b>
+
+            <div class="muted">
+              ${p.category}
+              ·
+              ${money(p.price)}
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <button
+              class="small"
+              onclick="editProduct(${p.id})">
+
+              Sửa
+
+            </button>
+
+            <button
+              class="small"
+              onclick="deleteProduct(${p.id})">
+
+              Xóa
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `).join("")
+    }
+
+
+    <div class="adminTitle">
+
+      <h3>
+        💳 YÊU CẦU NẠP
+      </h3>
+
+      <span class="badge">
+        ${pending} chờ duyệt
+      </span>
+
+    </div>
+
+
+    ${
+      deposits.length
+
+      ?
+
+      deposits.map(d=>`
+
+        <div class="adminItem">
+
+          <div>
+
+            <b>
+              ${escapeHTML(d.username)}
+            </b>
+
+            <div class="muted">
+              ${d.id}
+            </div>
+
+            <div class="muted">
+              ${money(d.amount)}
+            </div>
+
+            <div class="muted">
+              ${d.createdAt}
+            </div>
+
+          </div>
+
+
+          <div>
+
+            ${
+              d.status==="Chờ duyệt"
+
+              ?
+
+              `
+
+                <button
+                  class="small"
+                  onclick="
+                    approveDeposit('${d.id}')
+                  ">
+
+                  Duyệt
+
+                </button>
+
+                <button
+                  class="small"
+                  onclick="
+                    rejectDeposit('${d.id}')
+                  ">
+
+                  Từ chối
+
+                </button>
+
+              `
+
+              :
+
+              `<span class="${
+                d.status==="Đã duyệt"
+                ?"statusSuccess"
+                :"statusReject"
+              }">
+                ${d.status}
+              </span>`
+
+            }
+
+          </div>
+
+        </div>
+
+      `).join("")
+
+      :
+
+      `
+
+        <div class="empty">
+          Không có giao dịch.
+        </div>
+
+      `
+
+    }
+
+
+    <div class="adminTitle">
+
+      <h3>
+        📦 ĐƠN HÀNG
+      </h3>
+
+    </div>
+
+
+    ${
+      orders.length
+
+      ?
+
+      orders.map(o=>`
+
+        <div class="adminItem">
+
+          <div>
+
+            <b>
+              ${o.id}
+            </b>
+
+            <div class="muted">
+              ${escapeHTML(o.username)}
+            </div>
+
+          </div>
+
+
+          <div style="text-align:right">
+
+            <b style="color:#ffd54a">
+              ${money(o.total)}
+            </b>
+
+            <div class="muted">
+              ${o.status}
+            </div>
+
+          </div>
+
+        </div>
+
+      `).join("")
+
+      :
+
+      `
+
+        <div class="empty">
+          Chưa có đơn hàng.
+        </div>
+
+      `
+
+    }
+
+
+    <br>
+
+    <button
+      class="secondary"
+      style="width:100%"
+      onclick="adminLogout()">
+
+      🚪 ĐĂNG XUẤT ADMIN
+
+    </button>
+
+  `;
+
+}
+
+
+function adminLogout(){
+
+  isAdmin=false;
+
+  closeModal("adminModal");
+
+  toast(
+    "Đã đăng xuất Admin."
+  );
+
+}
+
+
+/* =========================================================
+   APPROVE DEPOSIT
+========================================================= */
+
+function approveDeposit(id){
+
+  if(!isAdmin){
+
+    toast(
+      "Không có quyền."
+    );
+
+    return;
+
+  }
+
+
+  const d=
+    deposits.find(
+      x=>x.id===id
+    );
+
+
+  if(
+    !d ||
+    d.status!=="Chờ duyệt"
+  ){
+
+    return;
+
+  }
+
+
+  const u=
+    users.find(
+      x=>x.username===d.username
+    );
+
+
+  if(!u){
+
+    toast(
+      "Không tìm thấy tài khoản."
+    );
+
+    return;
+
+  }
+
+
+  u.balance+=
+    Number(d.amount);
+
+
+  d.status="Đã duyệt";
+
+
+  if(
+    currentUser &&
+    currentUser.username===
+      u.username
+  ){
+
+    currentUser=u;
+
+    localStorage.setItem(
+      "gems_current_user",
+      JSON.stringify(u)
+    );
+
+  }
+
+
+  saveAll();
+
+  updateUI();
+
+  renderAdmin();
+
+  toast(
+    "Đã cộng "+
+    money(d.amount)+
+    " vào số dư."
+  );
+
+}
+
+
+function rejectDeposit(id){
+
+  if(!isAdmin)return;
+
+
+  const d=
+    deposits.find(
+      x=>x.id===id
+    );
+
+
+  if(!d)return;
+
+
+  d.status="Từ chối";
+
+  saveAll();
+
+  renderAdmin();
+
+  toast(
+    "Đã từ chối giao dịch."
+  );
+
+}
+
+
+/* =========================================================
+   PRODUCT ADMIN
+========================================================= */
+
+function openAddProduct(){
+
+  document.getElementById(
+    "productModalTitle"
+  ).textContent=
+    "➕ THÊM SẢN PHẨM";
+
+
+  document.getElementById(
+    "editProductId"
+  ).value="";
+
+
+  document.getElementById(
+    "productName"
+  ).value="";
+
+
+  document.getElementById(
+    "productPrice"
+  ).value="";
+
+
+  document.getElementById(
+    "productCategory"
+  ).value="VIP";
+
+
+  document.getElementById(
+    "productEmoji"
+  ).value="🔥";
+
+
+  document.getElementById(
+    "productDesc"
+  ).value="";
+
+
+  openModal("productModal");
+
+}
+
+
+function editProduct(id){
+
+  if(!isAdmin)return;
+
+
+  const p=
+    products.find(
+      x=>x.id===id
+    );
+
+
+  if(!p)return;
+
+
+  document.getElementById(
+    "productModalTitle"
+  ).textContent=
+    "✏️ SỬA SẢN PHẨM";
+
+
+  document.getElementById(
+    "editProductId"
+  ).value=p.id;
+
+
+  document.getElementById(
+    "productName"
+  ).value=p.name;
+
+
+  document.getElementById(
+    "productPrice"
+  ).value=p.price;
+
+
+  document.getElementById(
+    "productCategory"
+  ).value=p.category;
+
+
+  document.getElementById(
+    "productEmoji"
+  ).value=p.emoji;
+
+
+  document.getElementById(
+    "productDesc"
+  ).value=p.desc;
+
+
+  openModal("productModal");
+
+}
+
+
+function saveProduct(){
+
+  if(!isAdmin){
+
+    toast(
+      "Không có quyền."
+    );
+
+    return;
+
+  }
+
+
+  const id=
+    Number(
+      document.getElementById(
+        "editProductId"
+      ).value
+    );
+
+
+  const name=
+    document
+      .getElementById(
+        "productName"
+      )
+      .value
+      .trim();
+
+
+  const price=
+    Number(
+      document.getElementById(
+        "productPrice"
+      ).value
+    );
+
+
+  const category=
+    document.getElementById(
+      "productCategory"
+    ).value;
+
+
+  const emoji=
+    document
+      .getElementById(
+        "productEmoji"
+      )
+      .value
+      .trim()||"🎮";
+
+
+  const desc=
+    document
+      .getElementById(
+        "productDesc"
+      )
+      .value
+      .trim();
+
+
+  if(!name || price<=0){
+
+    toast(
+      "Nhập tên và giá hợp lệ."
+    );
+
+    return;
+
+  }
+
+
+  if(id){
+
+    const p=
+      products.find(
+        x=>x.id===id
+      );
+
+
+    if(p){
+
+      p.name=name;
+      p.price=price;
+      p.category=category;
+      p.emoji=emoji;
+      p.desc=desc;
+
+    }
+
+  }else{
+
+    products.push({
+
+      id:Date.now(),
+
+      name,
+
+      price,
+
+      category,
+
+      emoji,
+
+      desc
+
+    });
+
+  }
+
+
+  saveAll();
+
+  closeModal("productModal");
+
+  renderProducts();
+
+  renderAdmin();
+
+  toast(
+    "Đã lưu sản phẩm."
+  );
+
+}
+
+
+function deleteProduct(id){
+
+  if(!isAdmin)return;
+
+
+  if(
+    !confirm(
+      "Bạn có chắc muốn xóa sản phẩm này?"
+    )
+  ){
+
+    return;
+
+  }
+
+
+  products=
+    products.filter(
+      p=>p.id!==id
+    );
+
+
+  saveAll();
+
+  renderProducts();
+
+  renderAdmin();
+
+  toast(
+    "Đã xóa sản phẩm."
+  );
+
+}
+
+
+/* =========================================================
+   UI
+========================================================= */
+
+function updateUI(){
+
+  const u=user();
+
+
+  document.getElementById(
+    "balanceBox"
+  ).textContent=
+    u
+      ? money(u.balance)
+      : "0đ";
+
+
+  document.getElementById(
+    "cartCount"
+  ).textContent=
+    cart.reduce(
+      (s,x)=>s+x.qty,
+      0
+    );
+
+
+  const balance=
+    document.getElementById(
+      "depositCurrentBalance"
+    );
+
+
+  if(balance && u){
+
+    balance.textContent=
+      money(u.balance);
+
+  }
+
+
+  if(
+    document
+      .getElementById("depositModal")
+      .classList.contains("show")
+  ){
+
+    renderLatestDeposit();
+
+  }
+
+}
+
+
+function scrollProducts(){
+
+  document
+    .getElementById("products")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   INIT
+========================================================= */
+
+renderProducts();
+
+updateUI();
+
+</script>
+
+</body>
+</html>
