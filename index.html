@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TRIETSHOP - Redirect</title>
+</head>
+<body>
+  <script>
+    // This page loads the repository's TRIETSHOP.md (which contains full HTML)
+    // and writes it into the document so GitHub Pages can serve it without
+    // duplicating the large file in this commit.
+    fetch('https://raw.githubusercontent.com/trietdinh2012-spec/TRIETGAMING/main/TRIETSHOP.md')
+      .then(r => r.text())
+      .then(t => {
+        // If the fetched content already contains a full HTML document, replace the
+        // current document with it. Otherwise, inject into body.
+        if (/<!doctype html>/i.test(t) || /<html/i.test(t)) {
+          document.open();
+          document.write(t);
+          document.close();
+        } else {
+          document.body.innerHTML = t;
+        }
+      })
+      .catch(err => {
+        document.body.innerHTML = '<h2>Không thể tải trang</h2><pre>'+err.toString()+'</pre>'
+      });
+  </script>
+</body>
+</html>
